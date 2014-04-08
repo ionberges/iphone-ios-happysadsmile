@@ -1,26 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Happy View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="HappyViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="DvY-9a-6j9" customClass="HappyView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="OK8-ob-o4l" appends="YES" id="b0b-Ye-kOA"/>
+                            <outletCollection property="gestureRecognizers" destination="aNX-mS-FhG" appends="YES" id="Mll-JR-dta"/>
+                            <outletCollection property="gestureRecognizers" destination="N6L-lk-krR" appends="YES" id="hEL-57-gOc"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="happyView" destination="DvY-9a-6j9" id="njj-0s-Y4f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="aNX-mS-FhG">
+                    <connections>
+                        <action selector="pan:" destination="2" id="86w-yo-p50"/>
+                    </connections>
+                </panGestureRecognizer>
+                <rotationGestureRecognizer id="N6L-lk-krR">
+                    <connections>
+                        <action selector="rotar:" destination="2" id="fZJ-Ah-EqT"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="OK8-ob-o4l">
+                    <connections>
+                        <action selector="pinch:" destination="2" id="W3z-j5-3Xo"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="HappyView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HappyView.h"/>
+        </class>
+        <class className="HappyViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HappyViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pan:" candidateClass="UIPanGestureRecognizer"/>
+                <relationship kind="action" name="pinch:" candidateClass="UIPinchGestureRecognizer"/>
+                <relationship kind="action" name="rotar:" candidateClass="UIRotationGestureRecognizer"/>
+                <relationship kind="outlet" name="happyView" candidateClass="HappyView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

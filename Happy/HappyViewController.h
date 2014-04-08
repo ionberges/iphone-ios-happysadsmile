@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HappyView.h"
 
-@interface HappyViewController : UIViewController
+
+
+@interface HappyViewController : UIViewController <HappyViewDelegate>
+
+@property (weak, nonatomic) IBOutlet HappyView *happyView;
+@property (nonatomic) CGFloat felicidad;
 
 @end

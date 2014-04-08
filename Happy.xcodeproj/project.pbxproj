@@ -18,6 +18,7 @@
 		C1AE274F16AECE48003FA975 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AE274E16AECE48003FA975 /* Default-568h@2x.png */; };
 		C1AE275216AECE48003FA975 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1AE275016AECE48003FA975 /* MainStoryboard.storyboard */; };
 		C1AE275516AECE48003FA975 /* HappyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1AE275416AECE48003FA975 /* HappyViewController.m */; };
+		C1AE276016AECF15003FA975 /* HappyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1AE275F16AECF15003FA975 /* HappyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		C1AE275116AECE48003FA975 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C1AE275316AECE48003FA975 /* HappyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HappyViewController.h; sourceTree = "<group>"; };
 		C1AE275416AECE48003FA975 /* HappyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappyViewController.m; sourceTree = "<group>"; };
+		C1AE275E16AECF15003FA975 /* HappyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HappyView.h; sourceTree = "<group>"; };
+		C1AE275F16AECF15003FA975 /* HappyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HappyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				C1AE275316AECE48003FA975 /* HappyViewController.h */,
 				C1AE275416AECE48003FA975 /* HappyViewController.m */,
 				C1AE273F16AECE48003FA975 /* Supporting Files */,
+				C1AE275E16AECF15003FA975 /* HappyView.h */,
+				C1AE275F16AECF15003FA975 /* HappyView.m */,
 			);
 			path = Happy;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				C1AE274516AECE48003FA975 /* main.m in Sources */,
 				C1AE274916AECE48003FA975 /* HappyAppDelegate.m in Sources */,
 				C1AE275516AECE48003FA975 /* HappyViewController.m in Sources */,
+				C1AE276016AECF15003FA975 /* HappyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
